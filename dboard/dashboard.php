@@ -107,6 +107,11 @@ session_start();
 
                     <ul class="nav navbar-nav navbar-right">
                         <li>
+                            <a href="../index.php">
+                                Home
+                            </a>
+                        </li>
+                        <li>
                             <a href="../mail/signout.inc.php">
                                 Sign out
                             </a>
@@ -116,13 +121,12 @@ session_start();
             </div>
         </nav>
 
-
         <div class="content">
             <div class="container-fluid">
                 <?php
                     include '../mail/showvisual.php';
+                    $counter = 0;
                     while($row = mysqli_fetch_array($result)){
-                        $counter = 1;
 
                         if($counter % 3 == 0) {echo "<div class='row'>";}
 
@@ -134,7 +138,7 @@ session_start();
                                     <h5 class='title'><small>".$row['bidangdir']." - ".$row['dirname']."</small></h4>
                                     <hr style='margin-top:10px; margin-bottom: 15px;'>
                                     <h4 class='title'>".$row['graftitle']."</h4>
-                                    <h5 align='left'><small><i class='fa fa-gg-circle text-primary'></i>&nbsp;<a class='text-primary'>".$row['pubbid']."</a> &mdash; ".$row['pubclass']."</small></h5>
+                                    <h5 align='left'><small><i class='fa fa-gg-circle text-warning'></i>&nbsp;<a class='text-warning'>".$row['pubbid']."</a> &mdash; ".$row['pubclass']."</small></h5>
                                 </div>
                                 <div class='content'>
                                     <div id='chartPreferences' class='".$row['vizclass']."'>
@@ -147,7 +151,7 @@ session_start();
                                             <p class='category'><b>Jenis Visualisasi:</b>&nbsp; ".$row['vizname']."</p>
                                             <p class='category'><b>Tahun:</b>&nbsp; ".$row['grafyear']."</p>
                                             <p class='category'><b>Publikasi No:</b>&nbsp; ".$row['grafpubno']."</p>
-                                            <p class='category'><b>Download Data:</b></p>
+                                            <p class='category'><b>Download Data: </b><a href='../mail/showdata.php?id=".$row['grafid']."'>".$row['graftitle']." Tahun ".$row['grafyear']."</a></p>
                                             <hr style='margin-bottom: 10px; visibility:hidden;'>
                                             <p class='category'><b>Deskripsi:</b></p>
                                             <p class='category'><small>".$row['deskripsi']."</small></p>
@@ -155,10 +159,9 @@ session_start();
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        ";
+                        </div>";
 
-                        if($counter%3 == 0) {echo "</div>";}
+                        if($counter % 3 == 2) {echo "</div>";}
 
                         $counter++;
                     }

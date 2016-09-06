@@ -13,6 +13,8 @@ $deskripsi = $_POST['deskripsi'];
 $grafdata = $_POST['grafdata'];
 $shareflag = $_POST['shareflag'];
 
+$grafdataedit = nl2br($grafdata);
+
 if (empty($graftitle)) {
 	header("Location: ../signup.php?error=empty");
 	exit();
@@ -21,7 +23,7 @@ if (empty($graftitle)) {
 	exit();
 } else {
 	$sql = "INSERT INTO grafik (graftitle, vizid, grafyear, grafpubno, grafdata, deskripsi, shareflag, userid, pubid) 
-	VALUES ('$graftitle', '$vizid', '$grafyear', '$grafpubno', '$grafdata', '$deskripsi', '$shareflag', '$userid', '$pubid')";
+	VALUES ('$graftitle', '$vizid', '$grafyear', '$grafpubno', '$grafdataedit', '$deskripsi', '$shareflag', '$userid', '$pubid')";
 	$result = mysqli_query($conn, $sql);
-	header("Location: ../builder/builder1_poppyramid.php");
+	header("Location: ../index.php");
 }

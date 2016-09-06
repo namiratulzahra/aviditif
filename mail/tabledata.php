@@ -10,3 +10,5 @@ $sql = "SELECT * FROM grafik
         WHERE userid='$userid'";
 
 $result = mysqli_query($conn, $sql);
+
+?>

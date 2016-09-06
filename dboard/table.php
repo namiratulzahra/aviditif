@@ -102,6 +102,11 @@ session_start();
 
                     <ul class="nav navbar-nav navbar-right">
                         <li>
+                            <a href="../index.php">
+                                Home
+                            </a>
+                        </li>
+                        <li>
                             <a href="../mail/signout.inc.php">
                                 Sign out
                             </a>
@@ -118,13 +123,8 @@ session_start();
                     <div class="col-md-12">
                         <div class="card">
                             <div class="header">
-                                <div class="col-md-8" style="padding-bottom: 20px">
-                                    <h4 class="title">Riwayat Visualisasi</h4>
-                                    <p class="category">Yang Telah Dibangun (Diurut Berdasarkan Waktu)</p>
-                                </div>
-                                <div class="col-md-4" align="right">
-                                    <a class="btn btn-default" role="button">Simpan Perubahan</a>
-                                </div>
+                                <h4 class="title">Riwayat Visualisasi</h4>
+                                <p class="category">Yang Telah Dibangun (Diurut Berdasarkan Waktu)</p>
                             </div>
                             <div class="content table-responsive table-full-width">
                                 <table class="table table-hover table-striped">
@@ -139,35 +139,38 @@ session_start();
                                         <th style="width: 316px;">Deskripsi</th>
                                     </thead>
                                     <tbody>
-                                    <?php
-                                        include '../mail/tabledata.php';
+                                        <form action="../mail/updatedata.php" method="POST">
+                                        <?php
+                                            include '../mail/tabledata.php';
 
-                                        while($row = mysqli_fetch_array($result)){   //Creates a loop to loop through results
-                                        
-                                        $checked ='';
-                                        if($row['shareflag']==1) $checked ='checked="checked"'; 
-
-                                        echo "
-                                        <tr>
-                                            <td>
-                                                <label class='checkbox'>
-                                                    <span class='icons'>
-                                                        <span class='first-icon fa fa-square-o'></span>
-                                                        <span class='second-icon fa fa-check-square-o'></span>
-                                                    </span>
-                                                    <input type='checkbox' data-toggle='checkbox'".$checked.">
-                                                </label>
-                                            </td>
-                                            <td><small>".$row['vizname']."</small></td>
-                                            <td><b><small>".$row['graftitle']."<small></b></td>
-                                            <td><small>".$row['grafyear']."<small></td>
-                                            <td><small>".$row['grafpubno']."<small></td>
-                                            <td><small>".$row['pubbid']."<small></td>
-                                            <td><small>".$row['pubclass']."<small></td>
-                                            <td><small>".$row['deskripsi']."<small></td>
-                                        </tr>";  //$row['index'] the index here is a field name
-                                        }
-                                    ?>
+                                            while($row = mysqli_fetch_array($result)){   //Creates a loop to loop through results
+                                            
+                                            $checked ='';
+                                            if($row['shareflag']==1) {
+                                                $checked ="checked='checked'"; 
+                                            }
+                                            echo "
+                                            <tr>
+                                                <td>
+                                                    <label class='checkbox'>
+                                                        <span class='icons'>
+                                                            <span class='first-icon fa fa-square-o'></span>
+                                                            <span class='second-icon fa fa-check-square-o'></span>
+                                                        </span>
+                                                        <input type='checkbox' data-toggle='checkbox' ".$checked.">
+                                                    </label>
+                                                </td>
+                                                <td><small>".$row['vizname']."</small></td>
+                                                <td><b><small>".$row['graftitle']."<small></b></td>
+                                                <td><small>".$row['grafyear']."<small></td>
+                                                <td><small>".$row['grafpubno']."<small></td>
+                                                <td><small>".$row['pubbid']."<small></td>
+                                                <td><small>".$row['pubclass']."<small></td>
+                                                <td><small>".$row['deskripsi']."<small></td>
+                                            </tr>";  //$row['index'] the index here is a field name
+                                            }
+                                        ?>
+                                        </form>
                                     </tbody>
                                 </table>
                             </div>

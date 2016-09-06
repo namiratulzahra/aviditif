@@ -315,179 +315,179 @@ session_start();
                         <div class="col-md-2"></div>
                         <div class="col-md-8">
                             <div class="content">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label for="vizid"><h5>Jenis Visualisasi</h5></label>
-                                                <input type="text" readOnly="true" class="form-control" style="height: 47px;" placeholder="Population Pyramid">
-                                                <input type="hidden" readOnly="true" class="form-control" id="vizid" name="vizid" style="height: 47px;" value="1">
-                                            </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="vizid"><h5>Jenis Visualisasi</h5></label>
+                                            <input type="text" readOnly="true" class="form-control" style="height: 47px;" placeholder="Population Pyramid">
+                                            <input type="hidden" readOnly="true" class="form-control" id="vizid" name="vizid" style="height: 47px;" value="1">
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label for="graftitle"><h5>Judul*</h5></label>
-                                                <input type="text" class="form-control-save" id="graftitle" name="graftitle" placeholder="Title">
-                                            </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="graftitle"><h5>Judul*</h5></label>
+                                            <input type="text" class="form-control-save" id="graftitle" name="graftitle" placeholder="Title">
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label for="grafyear"><h5>Tahun</h5></label>
-                                                <input type="text" class="form-control-save" id="grafyear" name="grafyear" placeholder="Tahun">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label for="grafpubno" class="text muted"><h5>Nomor Publikasi</h5></label>
-                                                <input type="text" class="form-control" id="grafpubno" name="grafpubno" style="height: 47px;" placeholder="Nomor Publikasi">
-                                            </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="grafyear"><h5>Tahun</h5></label>
+                                            <input type="text" class="form-control-save" id="grafyear" name="grafyear" placeholder="Tahun">
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <label class="text muted"><h5 style="margin-bottom:-5px">Bidang dan Jenis Publikasi</h5></label>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="grafpubno" class="text muted"><h5>Nomor Publikasi</h5></label>
+                                            <input type="text" class="form-control" id="grafpubno" name="grafpubno" style="height: 47px;" placeholder="Nomor Publikasi">
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                            <!-- SOSIAL & KEPENDUDUKAN -->
-                                                <div class="radio">
-                                                    <label>
-                                                        <input onclick="document.getElementById('pubbid1').disabled = false; document.getElementById('pubbid2').disabled = true; document.getElementById('pubbid3').disabled = true;" type="radio" name="pubbid" id="bidsk" checked>
-                                                        <h6 class="text-muted" style="margin-top:4px; margin-bottom:0px;">Sosial &amp; Kependudukan</h6>
-                                                    </label>
-                                                </div>
-                                                <select id="pubbid1" name="pubid" class="form-control" style="height: 47px;">
-                                                    <option value="0">Pilih Jenis Publikasi</option>
-                                                    <option value="1">Gender</option>
-                                                    <option value="2">Geografi</option>
-                                                    <option value="3">Iklim</option>
-                                                    <option value="4">Indeks Pembangunan Manusia</option>
-                                                    <option value="5">Kemiskinan</option>
-                                                    <option value="6">Kependudukan</option>
-                                                    <option value="7">Kesehatan</option>
-                                                    <option value="8">Konsumsi dan Pengeluaran</option>
-                                                    <option value="9">Lingkungan Hidup</option>
-                                                    <option value="10">Pemerintahan</option>
-                                                    <option value="11">Pendidikan</option>
-                                                    <option value="12">Perumahan</option>
-                                                    <option value="13">Politik dan Keamanan</option>
-                                                    <option value="14">Potensi Desa</option>
-                                                    <option value="15">Sosial Budaya</option>
-                                                    <option value="16">Tenaga Kerja</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                            <!-- EKONOMI & PERDAGANGAN -->
-                                                <div class="radio">
-                                                    <label>
-                                                        <input onclick="document.getElementById('pubbid1').disabled = true; document.getElementById('pubbid2').disabled = false; document.getElementById('pubbid3').disabled = true;" type="radio" name="pubbid" id="bidep">
-                                                        <h6 class="text-muted" style="margin-top:4px; margin-bottom:0px;">Ekonomi &amp; Perdagangan</h6>
-                                                    </label>
-                                                </div>
-                                                <select id="pubbid2" name="pubid" class="form-control" style="height: 47px;" disabled="disable">
-                                                    <option value="0">Pilih Jenis Publikasi</option>
-                                                    <option value="17">Ekspor-Impor</option>
-                                                    <option value="18">Energi</option>
-                                                    <option value="19">Harga Eceran</option>
-                                                    <option value="20">Harga Perdagangan Besar</option>
-                                                    <option value="21">Harga Produsen</option>
-                                                    <option value="22">Industri Besar dan Sedang</option>
-                                                    <option value="23">Industri Mikro dan Kecil</option>
-                                                    <option value="24">Inflasi</option>
-                                                    <option value="25">Input output</option>
-                                                    <option value="26">ITB-ITK</option>
-                                                    <option value="27">Keuangan</option>
-                                                    <option value="28">Komunikasi</option>
-                                                    <option value="29">Konstruksi</option>
-                                                    <option value="30">Neraca Arus Dana</option>
-                                                    <option value="31">Neraca Sosial Ekonomi</option>
-                                                    <option value="32">Nilai Tukar Petani</option>
-                                                    <option value="33">Pariwisata</option>
-                                                    <option value="34">Produk Domestik Bruto (Lapangan Usaha)</option>
-                                                    <option value="35">Produk Domestik Bruto (Pengeluaran)</option>
-                                                    <option value="36">Produk Domestik Regional Bruto (Lapangan Usaha)</option>
-                                                    <option value="37">Produk Domestik Regional Bruto (Pengeluaran)</option>
-                                                    <option value="38">Transportasi</option>
-                                                    <option value="39">Upah Buruh</option>
-                                                    <option value="40">Usaha Mikro Kecil</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                            <!-- PERTANIAN & PERTAMBANGAN -->
-                                                <div class="radio">
-                                                    <label>
-                                                        <input onclick="document.getElementById('pubbid1').disabled = true; document.getElementById('pubbid2').disabled = true; document.getElementById('pubbid3').disabled = false;" type="radio" name="pubbid" id="bidpp">
-                                                        <h6 class="text-muted" style="margin-top:4px; margin-bottom:0px;">Pertanian &amp; Pertambangan</h6>
-                                                    </label>
-                                                </div>
-                                                <select id="pubbid3" name="pubid" class="form-control" style="height: 47px;" disabled="disable">
-                                                    <option value="0">Pilih Jenis Publikasi</option>
-                                                    <option value="41">Hortikultura</option>
-                                                    <option value="42">Kehutanan</option>
-                                                    <option value="43">Perikanan</option>
-                                                    <option value="44">Perkebunan</option>
-                                                    <option value="45">Pertambangan</option>
-                                                    <option value="46">Peternakan</option>
-                                                    <option value="47">Tanaman Pangan</option>
-                                                </select>
-                                            </div>
-                                        </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label class="text muted"><h5 style="margin-bottom:-5px">Bidang dan Jenis Publikasi</h5></label>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label class="text muted"><h5>Deskripsi*</h5></label>
-                                                <textarea class="form-control" id="deskripsi" name="deskripsi" rows="8"></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label class="text muted"><h5>Data</h5></label>
-                                                <textarea class="form-control" readonly="readonly" id="grafdata" name="grafdata" rows="4"></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-3">
-                                            <div class="checkbox" style="margin-top: 7px;">
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                        <!-- SOSIAL & KEPENDUDUKAN -->
+                                            <div class="radio">
                                                 <label>
-                                                    <input type="checkbox" id="shareflag" name="shareflag" value="1"> <h5 style="margin-top: 3px;">Share Publikasi</h5>
+                                                    <input onclick="document.getElementById('pubbid1').disabled = false; document.getElementById('pubbid2').disabled = true; document.getElementById('pubbid3').disabled = true;" type="radio" name="pubbid" id="bidsk" checked>
+                                                    <h6 class="text-muted" style="margin-top:4px; margin-bottom:0px;">Sosial &amp; Kependudukan</h6>
                                                 </label>
                                             </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="checkbox" style="margin-top: 7px;">
-                                                <label>
-                                                    <input type="checkbox" id="savedata" name="savedata" value="1" onclick="clonedata(this.form)"> <h5 style="margin-top: 3px;"">Simpan Data</h5>
-                                                    <script>
-                                                        function clonedata(f) {
-                                                          if(f.savedata.checked == true) {
-                                                            f.grafdata.value = inputdata.getValue();
-                                                          } else {
-                                                            f.grafdata.value = null;
-                                                          }
-                                                        }
-                                                    </script>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div align="right"><button type="submit" name="action" class="btn btn-primary" role="button"><i class="fa fa-upload">.</i> Save Visualization</button></div>
+                                            <select id="pubbid1" name="pubid" class="form-control" style="height: 47px;">
+                                                <option value="0">Pilih Jenis Publikasi</option>
+                                                <option value="1">Gender</option>
+                                                <option value="2">Geografi</option>
+                                                <option value="3">Iklim</option>
+                                                <option value="4">Indeks Pembangunan Manusia</option>
+                                                <option value="5">Kemiskinan</option>
+                                                <option value="6">Kependudukan</option>
+                                                <option value="7">Kesehatan</option>
+                                                <option value="8">Konsumsi dan Pengeluaran</option>
+                                                <option value="9">Lingkungan Hidup</option>
+                                                <option value="10">Pemerintahan</option>
+                                                <option value="11">Pendidikan</option>
+                                                <option value="12">Perumahan</option>
+                                                <option value="13">Politik dan Keamanan</option>
+                                                <option value="14">Potensi Desa</option>
+                                                <option value="15">Sosial Budaya</option>
+                                                <option value="16">Tenaga Kerja</option>
+                                            </select>
                                         </div>
                                     </div>
-                                    <br>
-                                    <div class="clearfix"></div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                        <!-- EKONOMI & PERDAGANGAN -->
+                                            <div class="radio">
+                                                <label>
+                                                    <input onclick="document.getElementById('pubbid1').disabled = true; document.getElementById('pubbid2').disabled = false; document.getElementById('pubbid3').disabled = true;" type="radio" name="pubbid" id="bidep">
+                                                    <h6 class="text-muted" style="margin-top:4px; margin-bottom:0px;">Ekonomi &amp; Perdagangan</h6>
+                                                </label>
+                                            </div>
+                                            <select id="pubbid2" name="pubid" class="form-control" style="height: 47px;" disabled="disable">
+                                                <option value="0">Pilih Jenis Publikasi</option>
+                                                <option value="17">Ekspor-Impor</option>
+                                                <option value="18">Energi</option>
+                                                <option value="19">Harga Eceran</option>
+                                                <option value="20">Harga Perdagangan Besar</option>
+                                                <option value="21">Harga Produsen</option>
+                                                <option value="22">Industri Besar dan Sedang</option>
+                                                <option value="23">Industri Mikro dan Kecil</option>
+                                                <option value="24">Inflasi</option>
+                                                <option value="25">Input output</option>
+                                                <option value="26">ITB-ITK</option>
+                                                <option value="27">Keuangan</option>
+                                                <option value="28">Komunikasi</option>
+                                                <option value="29">Konstruksi</option>
+                                                <option value="30">Neraca Arus Dana</option>
+                                                <option value="31">Neraca Sosial Ekonomi</option>
+                                                <option value="32">Nilai Tukar Petani</option>
+                                                <option value="33">Pariwisata</option>
+                                                <option value="34">Produk Domestik Bruto (Lapangan Usaha)</option>
+                                                <option value="35">Produk Domestik Bruto (Pengeluaran)</option>
+                                                <option value="36">Produk Domestik Regional Bruto (Lapangan Usaha)</option>
+                                                <option value="37">Produk Domestik Regional Bruto (Pengeluaran)</option>
+                                                <option value="38">Transportasi</option>
+                                                <option value="39">Upah Buruh</option>
+                                                <option value="40">Usaha Mikro Kecil</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                        <!-- PERTANIAN & PERTAMBANGAN -->
+                                            <div class="radio">
+                                                <label>
+                                                    <input onclick="document.getElementById('pubbid1').disabled = true; document.getElementById('pubbid2').disabled = true; document.getElementById('pubbid3').disabled = false;" type="radio" name="pubbid" id="bidpp">
+                                                    <h6 class="text-muted" style="margin-top:4px; margin-bottom:0px;">Pertanian &amp; Pertambangan</h6>
+                                                </label>
+                                            </div>
+                                            <select id="pubbid3" name="pubid" class="form-control" style="height: 47px;" disabled="disable">
+                                                <option value="0">Pilih Jenis Publikasi</option>
+                                                <option value="41">Hortikultura</option>
+                                                <option value="42">Kehutanan</option>
+                                                <option value="43">Perikanan</option>
+                                                <option value="44">Perkebunan</option>
+                                                <option value="45">Pertambangan</option>
+                                                <option value="46">Peternakan</option>
+                                                <option value="47">Tanaman Pangan</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="text muted"><h5>Deskripsi*</h5></label>
+                                            <textarea class="form-control" id="deskripsi" name="deskripsi" rows="8"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="text muted"><h5>Data</h5></label>
+                                            <textarea class="form-control" readonly="readonly" id="grafdata" name="grafdata" rows="4"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="checkbox" style="margin-top: 7px;">
+                                            <label>
+                                                <input type="checkbox" id="shareflag" name="shareflag" value="1"> <h5 style="margin-top: 3px;">Share Publikasi</h5>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="checkbox" style="margin-top: 7px;">
+                                            <label>
+                                                <input type="checkbox" id="savedata" name="savedata" value="1" onclick="clonedata(this.form)"> <h5 style="margin-top: 3px;"">Simpan Data</h5>
+                                                <script>
+                                                    function clonedata(f) {
+                                                      if(f.savedata.checked == true) {
+                                                        f.grafdata.value = inputdata.getValue();
+                                                      } else {
+                                                        f.grafdata.value = null;
+                                                      }
+                                                    }
+                                                </script>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div align="right"><button type="submit" name="action" class="btn btn-primary" role="button"><i class="fa fa-upload">.</i> Save Visualization</button></div>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="clearfix"></div>
                             </div>
                         </div>
                         <div class="col-md-2"></div>
