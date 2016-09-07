@@ -46,16 +46,8 @@ session_start();
     <!-- Theme CSS -->
     <link href="../css/agency.css" rel="stylesheet">
 
+    <script src="../js/box.js"></script>
     <style>
-        .label-kelas1 {
-          color: #1f77b4;
-        }
-        .label-kelas2 {
-          color: #ff8b24;
-        }        
-        .label-kelas3 {
-          color: #3fa93f;
-        }        
         .CodeMirror {
           height: auto;
         }
@@ -63,47 +55,30 @@ session_start();
           max-height: 300px;
           min-height: 100px;
         }
-        svg {
+
+        .box {
           font: 10px sans-serif;
-          padding: 10px;
-        }
-        .axis,
-        .frame {
-          shape-rendering: crispEdges;
         }
 
-        .axis line {
-          stroke: #ddd;
+        .box line,
+        .box rect,
+        .box circle {
+          fill: #fff;
+          stroke: #000;
+          stroke-width: 1.5px;
         }
 
-        .axis path {
-          display: none;
+        .box .center {
+          stroke-dasharray: 3,3;
         }
 
-        .cell text {
-          font-weight: bold;
-          text-transform: capitalize;
-        }
-
-        .frame {
+        .box .outlier {
           fill: none;
-          stroke: #aaa;
+          stroke: #ccc;
         }
 
-        circle {
-          fill-opacity: .7;
-        }
-
-        circle.hidden {
-          fill: #ccc !important;
-        }
-
-        .extent {
-          fill: #000;
-          fill-opacity: .125;
-          stroke: #fff;
-        }
         #wrapper {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
             border: 2px;
             margin: 0 auto; /* to make the div center align to the browser */
             padding: 40px 40px 0px 40px;
@@ -210,32 +185,25 @@ session_start();
                 <!-- Project Details Go Here -->
                 <div class="container">
                 <form action="../mail/submitvisual.php" method="POST">
-                    <h5><b><a href="http://bl.ocks.org/mbostock/4063663">Mike Bostock’s Block 4063663</a></b></h5>
+                    <h5><b><a href="http://bl.ocks.org/mbostock/4061502">Mike Bostock’s Block 4061502</a></b></h5>
 
-                    <h2>Scatterplot Matrix</h2>
+                    <h2>Box Plot</h2>
 
                     <ul class="list-inline">
-                        <li><span class="label label-success">SCATTERPLOT</span></li>
-                        <li><span class="label label-info">MULTI-DIMENSIONAL DATA</span></li>
-                        <li><span class="label label-primary">SELECTION</span></li>
+                        <li><span class="label label-success">BOX PLOT</span></li>
+                        <li><span class="label label-info">TWO DIMENSIONAL DATA</span></li>
+                        <li><span class="label label-danger">TRANSITION</span></li>
                     </ul>
-                    <br>
 
-                    <p class="item-intro text-muted">The scatterplot matrix visualizations pairwise correlations for multi-dimensional data; each cell in the matrix is a scatterplot. This example uses Anderson's data of iris flowers on the Gaspé Peninsula. Scatterplot matrix design invented by J. A. Hartigan; see also R<sup><a href="#1">[1]</a></sup> and GGobi<sup><a href="#2">[2]</a></sup>. Data on Iris flowers collected by Edgar Anderson and published by Ronald Fisher.</p>
+                    <p class="item-intro text-muted">A box-and-whisker plot uses simple glyphs that summarize a quantitative distribution with five standard statistics: the smallest value, lower quartile, median, upper quartile, and largest value. This summary approach allows the viewer to easily recognize differences between distributions. Data from the <a href="#1">Michelson–Morley experiment</a>. Implementation contributed by <a href="#2">Jason Davies</a>. This example periodically randomizes the values to demonstrate transitions.</p>
 
                     <p class="item-intro">Contoh format data: <p>
 
-                    <textarea id="example"">sepal length, sepal width, petal length, petal width, species
-    5.1,          3.5,         1.4,          0.2,     setosa
-    4.9,          3.0,         1.4,          0.2,     versicolor
-    4.7,          3.2,         1.3,          0.2,     virginica</textarea>
-
-                    <p><code>"sepal length"</code> : merupakan variabel pertama.<br>
-                    <code>"sepal width"</code> : merupakan variabel kedua.<br>
-                    <code>"petal length"</code> : merupakan variabel ketiga.<br>
-                    <code>"petal width"</code> : merupakan variabel keempat.<br>
-                    <code>"species"</code> : merupakan jenis kelompok dari data.<br>
-                    </p>
+                    <textarea id="example"">Expt, Run, Speed
+  1,   1,   850
+  1,   2,   740
+  1,   3,   900
+  1,   4,   1070</textarea>
 
                     <br>
                     <div class="divider"></div>
@@ -259,7 +227,7 @@ session_start();
                     
                     <br>
                     
-                    <p class="item-intro">Masukkan data pada kolom area di bawah ini. Atau gunakan contoh data pada <a href="https://raw.githubusercontent.com/profjsb/python-seminar/master/Homeworks/hw_3_data/flowers.csv"> halaman ini</a>.</p>
+                    <p class="item-intro">Masukkan data pada kolom area di bawah ini. Atau gunakan contoh data pada <a href="https://raw.githubusercontent.com/defunctzombie/d3-examples/master/box-plot/morley.csv"> halaman ini</a>.</p>
                         
                     <textarea id="values" name="values"></textarea>
 
@@ -291,28 +259,12 @@ session_start();
                     <div id="wrapper">
                         <div id="chart" class="row">
                             <?php
-                                include '../d3/d3_scatterplotmat.php';
+                                include '../d3/d3_boxplot.php';
                             ?>
                         </div>
                     </div>
 
-                    <br>
-                    <div class="container" align="center">
-                        <div class="legend">
-                            <ul class="list-inline">
-                                <li><h6>Keterangan: </h6></li>
-                                <li><h6><i class="fa fa-square label-kelas1"></i> Setosa</h6></li>
-                                <li><h6><i class="fa fa-square label-kelas2"></i> Versicolor</h6></li>
-                                <li><h6><i class="fa fa-square label-kelas3"></i> Virginica</h6></li>
-                            </ul>
-                        </div><br>
-                    </div>
-
-                    <div id="wrapper2">
-                        <div class="alert alert-warning" role="alert"><i class="fa fa-info-circle fa-fw"></i><h4>TIPS</h4>Gerakkan <i>arrow button</i> ke kanan dan ke kiri untuk merubah variabel tahun dan melihat pergerakan perubahan distribusi populasinya.</div>
-                    </div>
-
-                    <br>
+                    <br><br>
                     <div class="divider"></div>
                     <br>
                 </div>
@@ -331,8 +283,8 @@ session_start();
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label for="vizid"><h5>Jenis Visualisasi</h5></label>
-                                                <input type="text" readOnly="true" class="form-control" style="height: 47px;" placeholder="Scatterplot Matrix">
-                                                <input type="hidden" readOnly="true" class="form-control" id="vizid" name="vizid" style="height: 47px;" value="2">
+                                                <input type="text" readOnly="true" class="form-control" style="height: 47px;" placeholder="Box Plot">
+                                                <input type="hidden" readOnly="true" class="form-control" id="vizid" name="vizid" style="height: 47px;" value="3">
                                             </div>
                                         </div>
                                     </div>

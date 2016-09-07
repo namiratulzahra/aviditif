@@ -168,16 +168,14 @@ session_start();
                 ?>
             </div>
         </div>
-
-        <footer class="footer">
-            <div class="container-fluid">
-                <p class="copyright pull-right">
-                    Copyright &copy; 2016 <b>Muhammad Arif Maulana</b>, All Rights Reserved.
-                </p>
-            </div>
-        </footer>
-
     </div>
+    <footer class="footer">
+        <div class="container-fluid">
+            <p class="copyright pull-right">
+                Copyright &copy; 2016 <b>Muhammad Arif Maulana</b>, All Rights Reserved.
+            </p>
+        </div>
+    </footer>
 </div>
 
 
