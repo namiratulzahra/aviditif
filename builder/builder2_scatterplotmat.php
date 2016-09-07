@@ -181,13 +181,13 @@ session_start();
 
                 <?php
                 if (isset($_SESSION['userid'])) {
-                    echo "<a href='../dboard/dashboard.php' class='page-scroll btn btn-xl'><i class='fa fa-tasks'></i> Dashboard</a>
+                    echo "<a href='#' class='page-scroll btn btn-xl'><i class='fa fa-tasks'></i> Dashboard</a>
                     <a>-----</a>
-                    <a href='../mail/signout.inc.php' class='btn btn-xl'><i class='fa fa-sign-out'></i> Sign Out</a>";
+                    <a href='mail/signout.inc.php' class='page-scroll btn btn-xl'><i class='fa fa-sign-out'></i> Sign Out</a>";
                 } else {
                     echo "<a href='#contact' class='page-scroll btn btn-xl'><i class='fa fa-user-plus'></i> Create Your Account</a>
                     <a>-----</a>
-                    <a href='../signin.php' class='btn btn-xl'><i class='fa fa-sign-in'></i> Sign In</a>";
+                    <a href='signin.php' class='page-scroll btn btn-xl'><i class='fa fa-sign-in'></i> Sign In</a>";
                 }
                 ?>
             </div>

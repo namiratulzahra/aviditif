@@ -1,6 +1,7 @@
 .poppyramid {
     width: 287px;
     height: 245px;
+    margin-top: 30px;
     margin-bottom: 30px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -11,6 +12,7 @@
 .scatterplotmat {
     width: 287px;
     height: 245px;
+    margin-top: 30px;
     margin-bottom: 30px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -18,33 +20,3 @@
     background-image: url("../img/portfolio/scatterplot.png");
 }
 
-.boxplot {
-    width: 287px;
-    height: 245px;
-    margin-bottom: 30px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-image: url("../img/portfolio/boxplot.png");
-}
-
-.chorddiagram {
-    width: 287px;
-    height: 245px;
-    margin-bottom: 30px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-image: url("../img/portfolio/chorddiagram.png");
-}
-
-
-.bulletchart {
-    width: 287px;
-    height: 245px;
-    margin-bottom: 30px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-image: url("../img/portfolio/bulletchart.png");
-}
