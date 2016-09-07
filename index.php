@@ -271,17 +271,17 @@ session_start();
                                 <i class="fa fa-search fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/bulletchart-preview.png" class="img-responsive" alt="">
+                        <img src="img/portfolio/boxplot-preview.png" class="img-responsive" alt="">
                     </a>
                     <div class="portfolio-caption">
-                        <h4>Bullet Chart</h4>
-                        <p class="text-muted">Bar Chart</p>
+                        <h4>Box Plot</h4>
+                        <p class="text-muted">Box Plot</p>
                         <br>
 <!--                    <a type="button" class="btn btn-primary" href="builder/builder1_poppyramid.php#builder"><i class="fa fa-plus"></i> Build Visualization</a>-->
                         
                         <?php
                         if (isset($_SESSION['userid'])) {
-                            echo "<a type='button' class='btn btn-primary' href='builder/builder1_poppyramid.php#builder'><i class='fa fa-plus'></i> Build Visualization</a>";
+                            echo "<a type='button' class='btn btn-primary' href='builder/builder3_boxplot.php#builder'><i class='fa fa-plus'></i> Build Visualization</a>";
                         }
                         ?>
                     </div>
@@ -295,15 +295,15 @@ session_start();
                                 <i class="fa fa-search fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/zoomabletreemap-preview.png" class="img-responsive" alt="">
+                        <img src="img/portfolio/chorddiagram-preview.png" class="img-responsive" alt="">
                     </a>
                     <div class="portfolio-caption">
-                        <h4>Zoomable Treemap</h4>
-                        <p class="text-muted">Treemap</p>
+                        <h4>Chord Diagram</h4>
+                        <p class="text-muted">Chord Diagram</p>
                         <br>    
                         <?php
                         if (isset($_SESSION['userid'])) {
-                            echo "<a type='button' class='btn btn-primary' href='builder/builder1_poppyramid.php#builder'><i class='fa fa-plus'></i> Build Visualization</a>";
+                            echo "<a type='button' class='btn btn-primary' href='builder/builder4_chorddiagram.php#builder'><i class='fa fa-plus'></i> Build Visualization</a>";
                         }
                         ?>
                     </div>
@@ -317,15 +317,15 @@ session_start();
                                 <i class="fa fa-search fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/motionchart-preview.png" class="img-responsive" alt="">
+                        <img src="img/portfolio/bulletchart-preview.png" class="img-responsive" alt="">
                     </a>
                     <div class="portfolio-caption">
-                        <h4>Motion Chart</h4>
-                        <p class="text-muted">Bubble Chart</p>
+                        <h4>Bullet Chart</h4>
+                        <p class="text-muted">Bar Chart</p>
                         <br>
                         <?php
                         if (isset($_SESSION['userid'])) {
-                            echo "<a type='button' class='btn btn-primary' href='builder/builder1_poppyramid.php#builder'><i class='fa fa-plus'></i> Build Visualization</a>";
+                            echo "<a type='button' class='btn btn-primary' href='builder/builder5_bulletchart.php#builder'><i class='fa fa-plus'></i> Build Visualization</a>";
                         }
                         ?>
                     </div>
@@ -646,7 +646,7 @@ session_start();
                         <div class="col-lg-8 col-lg-offset-2">
                             <div class="modal-body">
                                 <?php
-                                include 'graph/graph3_bulletchart.php';
+                                include 'graph/graph3_boxplot.php';
                                 ?>
                             </div>
                         </div>
@@ -671,7 +671,7 @@ session_start();
                         <div class="col-lg-8 col-lg-offset-2">
                             <div class="modal-body">
                                 <?php
-                                include 'graph/graph4_zoomabletreemap.php';
+                                include 'graph/graph4_chorddiagram.php';
                                 ?>
                             </div>
                         </div>
@@ -696,7 +696,7 @@ session_start();
                         <div class="col-lg-8 col-lg-offset-2">
                             <div class="modal-body">
                                 <?php
-                                include 'graph/graph5_.php';
+                                include 'graph/graph5_bulletchart.php';
                                 ?>
                             </div>
                         </div>
