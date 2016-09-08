@@ -139,7 +139,6 @@ session_start();
                                         <th style="width: 316px;">Deskripsi</th>
                                     </thead>
                                     <tbody>
-                                        <form action="../mail/updatedata.php" method="POST">
                                         <?php
                                             include '../mail/tabledata.php';
 
@@ -170,7 +169,6 @@ session_start();
                                             </tr>";  //$row['index'] the index here is a field name
                                             }
                                         ?>
-                                        </form>
                                     </tbody>
                                 </table>
                             </div>

@@ -32,7 +32,7 @@ if ($hash) {
 
 	header("Location: ../index.php");
 } else {
-	echo "try again, handsome!";
+	echo "Try again!";
 }
 
 ?>
