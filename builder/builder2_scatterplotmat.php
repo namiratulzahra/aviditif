@@ -259,7 +259,7 @@ session_start();
                     
                     <br>
                     
-                    <p class="item-intro">Masukkan data pada kolom area di bawah ini. Atau gunakan contoh data pada <a href="https://raw.githubusercontent.com/profjsb/python-seminar/master/Homeworks/hw_3_data/flowers.csv"> halaman ini</a>.</p>
+                    <p class="item-intro">Masukkan data pada kolom area di bawah ini. Atau gunakan contoh data pada <a href="https://raw.githubusercontent.com/kevinkucharczyk/effective-bassoon/master/data/flowers.csv"> halaman ini</a>.</p>
                         
                     <textarea id="values" name="values"></textarea>
 
