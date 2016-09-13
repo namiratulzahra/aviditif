@@ -1,5 +1,10 @@
 <?php
 session_start();
+if (!isset($_SESSION['userid']))
+{
+    header("Location: ../signin.php");
+    die();
+}
 ?>
 
 <!doctype html>
@@ -168,14 +173,14 @@ session_start();
                 ?>
             </div>
         </div>
-    </div>
-    <footer class="footer">
+        <footer class="footer">
         <div class="container-fluid">
             <p class="copyright pull-right">
                 Copyright &copy; 2016 <b>Muhammad Arif Maulana</b>, All Rights Reserved.
             </p>
         </div>
-    </footer>
+        </footer>
+    </div>
 </div>
 
 

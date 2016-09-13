@@ -25,5 +25,5 @@ if (empty($graftitle)) {
 	$sql = "INSERT INTO grafik (graftitle, vizid, grafyear, grafpubno, grafdata, deskripsi, shareflag, userid, pubid) 
 	VALUES ('$graftitle', '$vizid', '$grafyear', '$grafpubno', '$grafdataedit', '$deskripsi', '$shareflag', '$userid', '$pubid')";
 	$result = mysqli_query($conn, $sql);
-	header("Location: ../index.php");
+	header("Location: ../dboard/dashboard.php");
 }
